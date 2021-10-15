@@ -1,17 +1,10 @@
 import './Homepage.style.scss'
-import MenuItem from '../../components/menuItem/MenuItem'
+import DirectoryMenu from '../../components/directoryMenu/DirectoryMenu'
 
 export default function Homepage() {
   return (
     <div className='homepage'>
-      <div className='directory-menu'>
-        <MenuItem title='Summer' />
-        <MenuItem title='Jumpsuits' />
-        <MenuItem title='Tops' />
-        <MenuItem title='Dresses' />
-        <MenuItem title='Swimwear' />
-        <MenuItem title='Knitwear' />
-      </div>
+      <DirectoryMenu />
     </div>
   )
 }
