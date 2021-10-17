@@ -122,13 +122,63 @@ export const  shopSections = [
     id: 3,
     title: 'Tops',
     img: 'https://th.bing.com/th/id/OIP.UQN21Ch_eSWIq3n75piRLAHaF7?pid=ImgDet&rs=1',
-    linkUrl: 'tops'
+    linkUrl: 'tops',
+    items: [
+      {
+        id: 1,
+        name: 'Zion Tee',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/8d7067f1-37c2-43dd-b9da-7d6eaa99e5a5_360x.jpg?v=1631232414',
+        price: 58
+      },
+      {
+        id: 2,
+        name: 'Allura Top - Floral',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/c24ebbb1-e808-4551-a259-8590888f48b1_360x.jpg?v=1631079687',
+        price: 52
+      },
+      {
+        id: 3,
+        name: 'Domi Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/d0a1d538-aa6d-4519-a2c8-1da3c54ea90b_360x.jpg?v=1630891969',
+        price: 68
+      },
+      {
+        id: 4,
+        name: 'Route 66 Sweater',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/d0b0809c-2575-429e-872c-26f555aca7c4_360x.jpg?v=1628572096',
+        price: 82
+      },
+      {
+        id: 5,
+        name: 'Gigi Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/bba64426-0e1d-47f4-b0af-47de44ffd804_360x.jpg?v=1628221941',
+        price: 78
+      },
+      {
+        id: 6,
+        name: 'Hera Knit Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/942d0e3d-f3d1-4353-b30a-c4c6b3b389c0_360x.jpg?v=1627515805',
+        price: 68
+      },
+      {
+        id: 7,
+        name: 'Cayenne Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/7a45e169-ee15-43df-9c9f-d6c162bad260_360x.jpg?v=1626302976',
+        price: 58
+      },
+      {
+        id: 8,
+        name: 'Lalita Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/abf8dffd-a71b-45a3-ac2a-0ed61fd3b9d9_360x.jpg?v=1604876814',
+        price: 48
+      }
+    ]
   },
   {
     id: 4,
     title: 'Dresses',
     img: 'https://cdnd.lystit.com/photos/2012/05/01/jill-stuart-off-white-dress-pleated-dress-metallic-lace-hem-product-2-3398464-769099560.jpeg',
-    linkUrl: 'dresses'
+    linkUrl: 'dresses',
   },
   {
     id: 5,
