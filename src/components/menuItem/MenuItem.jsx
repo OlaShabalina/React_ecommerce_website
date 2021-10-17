@@ -8,8 +8,8 @@ export default function MenuItem({ title, imgUrl }) {
     }}
     className='menuItem'
     >
+      <span className='overlay'></span>
       <div className='content'>
-        <span className='overlay'></span>
         <h1 className='title'>{title}</h1>
         <span className='subtitle'>SHOP NOW</span>
       </div>
