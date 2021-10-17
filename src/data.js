@@ -290,6 +290,56 @@ export const  shopSections = [
     id: 6,
     title: 'Knitwear',
     img: 'https://th.bing.com/th/id/R.1b553237891362265a62bef011b2062b?rik=9xNs0gVv9hILcQ&riu=http%3a%2f%2fcdnd.lystit.com%2fphotos%2f2011%2f11%2f17%2ffree-people-tea-knit-raschel-gypsy-lace-body-con-dress-product-1-2390824-314848524.jpeg&ehk=beaX6vuFpIfej5HP5aj5lVqQW9v6t7bkhlwKabl6Ccw%3d&risl=&pid=ImgRaw&r=0',
-    linkUrl: 'knitwear'
+    linkUrl: 'knitwear',
+    items: [
+      {
+        id: 1,
+        name: 'Zaia Knit Bike Shorts',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/a8efe89b-09a4-438f-82d7-605ae15f0f18_360x.jpg?v=1631852928',
+        price: 58
+      },
+      {
+        id: 2,
+        name: 'Zaia Knit Top',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/b3f1281f-5ea2-4286-8e89-2801e8d4d389_360x.jpg?v=1632094800',
+        price: 72
+      },
+      {
+        id: 3,
+        name: 'Khaled Knit Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/0fdf70c7-03f2-4d15-839a-86e7e0f3fb57_360x.jpg?v=1630884515',
+        price: 88
+      },
+      {
+        id: 4,
+        name: 'Ellis Shorts - Pink',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/3c529d52-cf26-4c7f-ba15-f5abb1f9727d_360x.jpg?v=1630640122',
+        price: 48
+      },
+      {
+        id: 5,
+        name: 'Ellis Cardi - Pink',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/c4cdbbe2-42de-4cc5-955d-1513b95db445_360x.jpg?v=1630884435',
+        price: 82
+      },
+      {
+        id: 6,
+        name: 'Ora Knit Cardi',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/0eeb65d2-cfdf-4d76-b666-36067dfc416b_360x.jpg?v=1629775394',
+        price: 82
+      },
+      {
+        id: 7,
+        name: 'Sevina Knit Shorts - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/779cab9b-3ec1-4f63-8a9c-b9808a08e658_360x.jpg?v=1629341399',
+        price: 48
+      },
+      {
+        id: 8,
+        name: 'Sevina Knit Top - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/d820dee9-f6f6-4d92-9278-8d9299eaba8d_360x.jpg?v=1629341313',
+        price: 68
+      }
+    ]
   }
 ]
