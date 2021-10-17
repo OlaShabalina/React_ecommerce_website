@@ -1,12 +1,14 @@
-import './MenuItem.styles.scss'
+import './MenuItem.styles.scss';
+import { withRouter } from 'react-router-dom';
 
-export default function MenuItem({ title, imgUrl }) {
+export default withRouter(function MenuItem({ title, img, history, linkUrl, match }) {
   return (
     <div 
     style={{
-      backgroundImage: `url(${imgUrl})`
+      backgroundImage: `url(${img})`
     }}
     className='menuItem'
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
       <span className='overlay'></span>
       <div className='content'>
@@ -15,4 +17,4 @@ export default function MenuItem({ title, imgUrl }) {
       </div>
     </div>
   )
-}
+})

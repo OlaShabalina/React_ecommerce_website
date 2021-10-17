@@ -7,8 +7,8 @@ export default function DirectoryMenu() {
 
   return (
     <div className='directory-menu'>
-        {shopSections.map(({ title, id, img }) => (
-          <MenuItem key={id} title={title} imgUrl={img} />
+        {shopSections.map(({ id, ...otherProps }) => (
+          <MenuItem key={id} {...otherProps} />
         ))}
       </div>
   )
