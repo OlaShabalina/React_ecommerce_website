@@ -66,7 +66,57 @@ export const  shopSections = [
     id: 2,
     title: 'Jumpsuits',
     img: 'https://i.pinimg.com/originals/94/9f/ec/949fecd46bd1026ff486a30339061fbb.jpg',
-    linkUrl: 'jumpsuits'
+    linkUrl: 'jumpsuits',
+    items: [
+      {
+        id: 1,
+        name: 'Diara Playsuit - Autumn',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/375ea391-0417-4163-bcab-d42594ca31d6_360x.jpg?v=1616628711',
+        price: 82
+      },
+      {
+        id: 2,
+        name: 'Norah Playsuit - Floral',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/playsuits-norah-playsuit---floral-1_360x.jpg?v=1611803901',
+        price: 90
+      },
+      {
+        id: 3,
+        name: 'Elsa Playsuit - Holly',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/new-elsa-playsuit---holly-1_360x.jpg?v=1598582192',
+        price: 88
+      },
+      {
+        id: 4,
+        name: 'East Playsuit - Mist',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/playsuits-east-playsuit---mist-1_360x.jpg?v=1600042350',
+        price: 88
+      },
+      {
+        id: 5,
+        name: 'Mersy Knit Playsuit',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/3d9236be-6fec-4cf1-b30c-a85153e13576_360x.jpg?v=1627256252',
+        price: 88
+      },
+      {
+        id: 6,
+        name: 'Xali Linen Playsuit',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/0370f0c7-a76a-484f-add7-aae7d12e39d6_360x.jpg?v=1632705808',
+        price: 82
+      },
+      {
+        id: 7,
+        name: 'Hully Jumpsuit',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/77274c30-bb43-4a38-b2c9-3dc9ccd606f9_360x.jpg?v=1633913736',
+        price: 82
+      },
+      {
+        id: 8,
+        name: 'Silky Jayna Playsuit',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/fafc08d3-5106-4707-8b7c-003458c4fce9_360x.jpg?v=1633063956',
+        price: 98
+      }
+    ]
   },
   {
     id: 3,
