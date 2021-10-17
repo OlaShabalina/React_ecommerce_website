@@ -234,7 +234,57 @@ export const  shopSections = [
     id: 5,
     title: 'Swimwear',
     img: 'https://assets.kogan.com/images/nonib/NNB-SKU2194322/1-6e3e76f25c-r1146261299_1.jpg?auto=webp&canvas=1200%2C800&fit=bounds&height=800&quality=75&width=1200',
-    linkUrl: 'swimwear'
+    linkUrl: 'swimwear',
+    items: [
+      {
+        id: 1,
+        name: 'Palma Tie Bottom - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/fb9a3911-9748-4965-a97e-514e8e944f4f_360x.jpg?v=1632460966',
+        price: 58
+      },
+      {
+        id: 2,
+        name: 'Palma Drawstring Bandeau - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/b36e778a-3933-4925-9695-7bee841236e5_360x.jpg?v=1632705110',
+        price: 58
+      },
+      {
+        id: 3,
+        name: 'Torquay Balconette Top - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/8e29cba5-fe66-450e-83de-501d43ed6c12_360x.jpg?v=1632700446',
+        price: 58
+      },
+      {
+        id: 4,
+        name: 'Sebastian Tie Bottom - Blue',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/081585a6-4c87-4a44-b078-f0d849f40859_360x.jpg?v=1632461656',
+        price: 58
+      },
+      {
+        id: 5,
+        name: 'Nike Red High Tops',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/df0e9980-e37b-4536-a4d8-e1a716b99395_360x.jpg?v=1631750111',
+        price: 58
+      },
+      {
+        id: 6,
+        name: 'Airlie Scoop Bandeau - Multi',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/28c6e157-4b70-4ac8-99fd-576ff25ef84a_360x.jpg?v=1631750121',
+        price: 55
+      },
+      {
+        id: 7,
+        name: 'Torquay Balconette Top - Multi',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/cda2d276-9b03-4298-b386-38229dc26a16_360x.jpg?v=1631490809',
+        price: 55
+      },
+      {
+        id: 8,
+        name: 'Apollo Bottom - Pastel',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/0d8e842c-887e-4b31-a478-adaecce6b2de_360x.jpg?v=1631489265',
+        price: 58
+      }
+    ]
   },
   {
     id: 6,
