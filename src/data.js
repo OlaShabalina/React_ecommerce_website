@@ -179,6 +179,56 @@ export const  shopSections = [
     title: 'Dresses',
     img: 'https://cdnd.lystit.com/photos/2012/05/01/jill-stuart-off-white-dress-pleated-dress-metallic-lace-hem-product-2-3398464-769099560.jpeg',
     linkUrl: 'dresses',
+    items: [
+      {
+        id: 1,
+        name: 'Moko Off Shoulder Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/72deba11-6fd8-4d65-aa15-6171a5e8a56a_360x.jpg?v=1634168813',
+        price: 92
+      },
+      {
+        id: 2,
+        name: 'Archa Maxi Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/46ec7c7f-b94c-4a97-8d6a-9f57f2a4945d_360x.jpg?v=1634168856',
+        price: 112
+      },
+      {
+        id: 3,
+        name: 'Que Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/114d8771-ab8e-4b6b-9307-3b8656340015_360x.jpg?v=1634169121',
+        price: 108
+      },
+      {
+        id: 4,
+        name: 'Alira Corset Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/6657224c-35b4-4eb0-a317-c09b52532920_360x.jpg?v=1633667656',
+        price: 88
+      },
+      {
+        id: 5,
+        name: 'Oria Floral Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/6f1d070c-1441-411d-a6d5-aa1275de0f7a_360x.jpg?v=1633925483',
+        price: 98
+      },
+      {
+        id: 6,
+        name: 'Bobbi Shirred Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/d64f97fd-8e40-45fd-afc0-6709af61a1fc_360x.jpg?v=1633925651',
+        price: 98
+      },
+      {
+        id: 7,
+        name: 'Air Jordan Limited',
+        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
+        price: 190
+      },
+      {
+        id: 8,
+        name: 'Maren Bubble Dress',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0108/8959/2898/products/db82e8eb-46a7-4812-8480-d6156c8484a7_360x.jpg?v=1633666937',
+        price: 98
+      }
+    ]
   },
   {
     id: 5,
