@@ -1,4 +1,5 @@
 import './PreviewCollection.scss'
+import CollectionItem from '../collectionItem/CollectionItem'
 
 export default function PreviewCollection({ title, items }) {
   return (
@@ -8,8 +9,8 @@ export default function PreviewCollection({ title, items }) {
         {
           items
           .filter((item, index) => index < 4)
-          .map((item) => (
-            <div key={item.id}>{item.name}</div>
+          .map(({id, ...itemProps}) => (
+            <CollectionItem key={id} {...itemProps} />
           ))
         }
       </div>
