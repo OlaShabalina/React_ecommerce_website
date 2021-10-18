@@ -1,0 +1,31 @@
+.Header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logoContainer {
+    margin: 0;
+    height: auto;
+    width: 70px;
+    padding: 15px;
+
+    .logo {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+    }
+  }
+}
