@@ -1,6 +1,7 @@
 import './Signin.scss';
 import { useState } from 'react';
 import FormInput from '../formInput/FormInput';
+import Button from '../button/Button';
 
 export default function Signin() {
   const [ values, setValues ] = useState({
@@ -15,7 +16,7 @@ export default function Signin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setValues({ email:'', password: ''});
+    setValues({ email: '', password: ''});
   }
 
   return (
@@ -40,7 +41,7 @@ export default function Signin() {
           label="password"
           required 
         />
-        <input type="submit" value="Submit Form" />
+        <Button type="submit" value="Submit Form"> Sign in </Button>
       </form>
     </div>
   )

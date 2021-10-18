@@ -1,16 +1,16 @@
 import './FormInput.scss'
 
-export default function FormInput({ handleChange, label, ...otherProps }) {
+export default function FormInput({ handleChange, label, value, ...otherProps }) {
   return (
-    <div className="FormInputGroup">
+    <div className="FormInput">
       <input 
-        className="formInput"
+        className="input"
         onChange={handleChange}
         {...otherProps}
       />
       {
         label ? 
-        <label className={`${otherProps.value.length ? 'shrink' : ''} formInputLabel`}>
+        <label className={`${ (value !== '') ? 'shrink' : ''} formInputLabel`}>
           {label}
         </label>
         : null

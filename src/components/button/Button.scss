@@ -1,0 +1,25 @@
+@import '../../global.scss';
+
+.Button {
+  min-width: 165px;
+  width: auto;
+  max-width: 100px;
+  text-align: center;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: $mainColor;
+  color: $lightColor;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: $mainColor;
+    border: 1px solid $mainColor;
+  }
+}
