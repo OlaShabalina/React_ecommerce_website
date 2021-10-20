@@ -12,22 +12,21 @@ function App() {
   // // Integrating user authentification 
   const [ user, setUser ] = useState({ currentUser: null });
 
-  console.log(user)
-
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
       setUser(user);
     })
 
     return () => {
-      console.log(user._delegate.displayName)
       unsubscribeFromAuth();
     }
   }, [])
 
+  console.log(user ? (user._delegate) : 'logged out')
+
   return (
     <div>
-    <Header />
+    <Header currentUser={user} />
     <Switch>
       <Route exact path='/' component={Homepage} />
       <Route path='/shop' component={ShopPage} />

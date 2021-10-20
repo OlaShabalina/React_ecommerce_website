@@ -1,8 +1,10 @@
 import './Button.scss'
 
-export default function Button( { children, ...otherProps }) {
+export default function Button( { children, isGoogleSignIn, ...otherProps }) {
   return (
-    <div className="Button" {...otherProps}>
+    <div 
+    className={`${isGoogleSignIn ? 'googleSignIn' : ''} Button`} {...otherProps}
+    >
       {children}
     </div>
   )

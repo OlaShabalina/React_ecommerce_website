@@ -1,9 +1,9 @@
 @import '../../global.scss';
 
 .Button {
-  min-width: 165px;
-  width: fit-content;
-  max-width: 150px;
+  min-width: fit-content;
+  width: auto;
+  max-width: 120px;
   text-align: center;
   height: 50px;
   letter-spacing: 0.5px;
@@ -21,6 +21,16 @@
   &:hover {
     background-color: white;
     color: $mainColor;
-    border: 1px solid $mainColor;
+    outline: 1px solid $mainColor;
+  }
+
+  &.googleSignIn {
+    background-color: #4285f4;
+    color: $lightColor;
+
+    &:hover {
+      background-color: #347ae8;
+      outline: 1px solid #347ae8;
+    }
   }
 }
