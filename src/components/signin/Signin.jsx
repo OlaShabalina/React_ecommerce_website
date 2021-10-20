@@ -2,6 +2,7 @@ import './Signin.scss';
 import { useState } from 'react';
 import FormInput from '../formInput/FormInput';
 import Button from '../button/Button';
+import { signInWithGoogle } from '../../firebase/firebase';
 
 export default function Signin() {
   const [ values, setValues ] = useState({
@@ -22,7 +23,7 @@ export default function Signin() {
   return (
     <div className="Signin">
       <h2>I already have an account</h2>
-      <span>Sing in with your email and password</span>
+      <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
         <FormInput 
@@ -41,7 +42,8 @@ export default function Signin() {
           label="password"
           required 
         />
-        <Button type="submit" value="Submit Form"> Sign in </Button>
+        <Button type="submit" value="Submit Form">Sign in</Button>
+        <Button onClick={signInWithGoogle}>Sign in with Google</Button>
       </form>
     </div>
   )

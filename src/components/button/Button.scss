@@ -2,20 +2,21 @@
 
 .Button {
   min-width: 165px;
-  width: auto;
-  max-width: 100px;
+  width: fit-content;
+  max-width: 150px;
   text-align: center;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 13px;
   background-color: $mainColor;
   color: $lightColor;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
   cursor: pointer;
+  display: inline-flex;
 
   &:hover {
     background-color: white;
