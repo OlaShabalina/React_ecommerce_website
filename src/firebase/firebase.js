@@ -13,6 +13,38 @@ const firebaseConfig = {
   measurementId: "G-JJBKPF99NZ"
 };
 
+// creating user profile document based on his Google authentification
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  // if user is not logged in - we won't create a profile
+  if (!userAuth) return;
+
+  // Otherwise we will use the user reference inside users collection
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+
+  // snapShot object will have an "exists" property. If exists:
+  if (!snapShot.exists) {
+
+    // Will take name and email, plus time created, to save in out db
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      })
+
+    } catch (error) {
+      console.log('error creating user', error.message);
+    }
+  }
+  
+  return userRef;
+}
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
