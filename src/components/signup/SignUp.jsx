@@ -14,37 +14,26 @@ export default function SignUp() {
     confirmPassword: ''
   });
   
-  // Once the user is registered - there will be a message shown
-  const [ message, setMessage ] = useState({ success: false, error: false });
-
-  // function for accepting input change and adding it to the user state
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewUser({ 
-      ...newUser, 
+    setNewUser({
       [name]: value 
     });
   }
 
-  // adding a new user on submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let { displayName, email, password, confirmPassword } = e.target.elements;
-
+    const { displayName, email, password, confirmPassword } = newUser;
 
     // Password validation
-    if (password.value !== confirmPassword.value) {
-      
-      setMessage({ success: false, error: true });
+    if (password !== confirmPassword) {
+      alert("Passwords don't match!");
       return;
     }
 
     try {
-
-      displayName = displayName.value;
-      email = email.value;
-      password = password.value;
 
       // creating user in our firebase db
       const { user } = await auth.createUserWithEmailAndPassword( email, password );
@@ -58,20 +47,12 @@ export default function SignUp() {
         confirmPassword: ''
       });
 
-      // also show a message that user has been created
-      setMessage({ success: true, error: false });
+
 
     } catch (err) {
-
-      // show error message if there is an error
-      setMessage({ success: false, error: true });
+      console.log(err)
     }
   }
-
-  // hide both success or error messages in 3sec
-  setTimeout(() => {
-    setMessage({ success: false, error: false })
-  }, 3000)
 
   return (
     <div className="SignUp">
@@ -112,17 +93,6 @@ export default function SignUp() {
           required 
         />
         <Button type="submit"> Sign up </Button>
-        { if (message.success) (
-          <span>
-            New account has been created. 
-          </span>
-        ) else if (message.error) (
-          <span>
-            Email address is already in use or credentials are not correct.
-          </span>
-        ) else (
-          <span></span>
-        )}
       </form>
       
     </div>
