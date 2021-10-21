@@ -2,22 +2,30 @@ import './Signin.scss';
 import { useState } from 'react';
 import FormInput from '../formInput/FormInput';
 import Button from '../button/Button';
-import { signInWithGoogle } from '../../firebase/firebase';
+import { auth, signInWithGoogle } from '../../firebase/firebase';
 
 export default function Signin() {
   const [ values, setValues ] = useState({
     email: '',
     password: ''
-  })
+  });
 
   const handleInput = (e) => {
     const { value, name } = e.target;
     setValues({ [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setValues({ email: '', password: ''});
+
+    const { email, password } = values;
+
+    try {
+      auth.signInWithEmailAndPassword(email, password);
+      setValues({ email: '', password: ''});
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
@@ -44,7 +52,7 @@ export default function Signin() {
         />
         <div className="buttons">
           <Button type="submit" value="Submit Form">Sign in</Button>
-          <Button onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</Button>
+          <Button type="button" onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</Button>
         </div>
       </form>
     </div>

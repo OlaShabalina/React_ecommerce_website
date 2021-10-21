@@ -2,10 +2,10 @@ import './Button.scss'
 
 export default function Button( { children, isGoogleSignIn, ...otherProps }) {
   return (
-    <div 
+    <button 
     className={`${isGoogleSignIn ? 'googleSignIn' : ''} Button`} {...otherProps}
     >
       {children}
-    </div>
+    </button>
   )
 }

@@ -5,32 +5,52 @@ import { auth, createUserProfileDocument } from '../../firebase/firebase';
 import { useState } from 'react';
 
 export default function SignUp() {
+
+  // new user will be set up on registration 
   const [ newUser, setNewUser ] = useState({
     displayName: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
+  
+  // Once the user is registered - there will be a message shown
+  const [ message, setMessage ] = useState({ success: false, error: false });
 
+  // function for accepting input change and adding it to the user state
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewUser({ 
+      ...newUser, 
+      [name]: value 
+    });
+  }
+
+  // adding a new user on submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { displayName, email, password, confirmPassword } = newUser;
+    let { displayName, email, password, confirmPassword } = e.target.elements;
+
 
     // Password validation
-    if (password !== confirmPassword) {
-      alert("Passwords don't match!");
+    if (password.value !== confirmPassword.value) {
+      
+      setMessage({ success: false, error: true });
       return;
     }
 
     try {
+
+      displayName = displayName.value;
+      email = email.value;
+      password = password.value;
 
       // creating user in our firebase db
       const { user } = await auth.createUserWithEmailAndPassword( email, password );
       await createUserProfileDocument(user, { displayName });
 
       // once user is created we reset the fields 
-
       setNewUser({
         displayName: '',
         email: '',
@@ -38,15 +58,20 @@ export default function SignUp() {
         confirmPassword: ''
       });
 
+      // also show a message that user has been created
+      setMessage({ success: true, error: false });
+
     } catch (err) {
-      console.log(err)
+
+      // show error message if there is an error
+      setMessage({ success: false, error: true });
     }
   }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewUser({ [name]: value })
-  }
+  // hide both success or error messages in 3sec
+  setTimeout(() => {
+    setMessage({ success: false, error: false })
+  }, 3000)
 
   return (
     <div className="SignUp">
@@ -79,14 +104,25 @@ export default function SignUp() {
           required 
         />
         <FormInput 
-          name="password" 
+          name="confirmPassword" 
           type="password" 
           value={newUser.confirmPassword} 
           handleChange={handleChange}
           label="Confirm password"
           required 
         />
-        <Button type="submit" value="Submit Form"> Sign up </Button>
+        <Button type="submit"> Sign up </Button>
+        { if (message.success) (
+          <span>
+            New account has been created. 
+          </span>
+        ) else if (message.error) (
+          <span>
+            Email address is already in use or credentials are not correct.
+          </span>
+        ) else (
+          <span></span>
+        )}
       </form>
       
     </div>

@@ -11,7 +11,7 @@ import { useState, useEffect, useRef } from 'react';
 function App() {
 
   // setting up state for the logged in user
-  const [ currentUser, setCurrentUser ] = useState({ currentUser: null });
+  const [ user, setUser ] = useState({ currentUser: null });
 
   let unsubscribeFromAuth = useRef(null);
 
@@ -29,17 +29,17 @@ function App() {
 
         // we will be saving the user as id, displayName, email and when the account was created at as per firebase config file
         userRef.onSnapshot(snapShot => {
-          setCurrentUser({
+          setUser({
             currentUser: {
               id: snapShot.id,
               ...snapShot.data()
             }
           });
         });
-        
+
       } else {
         // else we set a state of the user to null
-        setCurrentUser({ currentUser: null });
+        setUser({ currentUser: null });
       }
     });
 
@@ -48,11 +48,9 @@ function App() {
     }
   }, [])
 
-  console.log(currentUser)
-
   return (
   <div>
-    <Header currentUser={currentUser} />
+    <Header currentUser={user.currentUser} />
     <Switch>
       <Route exact path='/' component={Homepage} />
       <Route path='/shop' component={ShopPage} />
