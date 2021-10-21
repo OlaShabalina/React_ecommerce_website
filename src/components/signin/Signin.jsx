@@ -1,10 +1,10 @@
 import './Signin.scss';
 import FormInput from '../formInput/FormInput';
 import Button from '../button/Button';
-import { auth, signInWithGoogle } from '../../firebase/firebase';
+import { signInWithGoogle } from '../../firebase/firebase';
 import { Component } from 'react';
 
-export default class SignIn extends Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
 
@@ -58,3 +58,5 @@ export default class SignIn extends Component {
     )
   }
 }
+
+export default SignIn;
